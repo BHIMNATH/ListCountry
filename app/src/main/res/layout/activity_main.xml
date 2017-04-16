@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.listcountry.MainActivity">
+
+    <TextView android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        tools:context=".MainActivity" />
+    <EditText android:id="@+id/edtName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtName"/>
+    <SurfaceView android:id="@+id/sp1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/edtName"
+        android:background="#FFFFFF"/>
+
+    <TextView android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        tools:context=".MainActivity"
+        android:layout_below="@+id/sp1"/>
+    <EditText android:id="@+id/edtPhone"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtPhone"
+        android:layout_below="@+id/edtName"/>
+    <SurfaceView android:id="@+id/sp2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/edtPhone"
+        android:background="#FFFFFF"/>
+
+    <Button android:id="@+id/add"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        tools:context=".MainActivity"
+        android:layout_below="@+id/sp2" />
+    <Button android:id="@+id/remove"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:layout_toRightOf="@+id/add"
+        android:layout_below="@+id/sp2"/>
+
+    <ListView android:id="@+id/lst" android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/add">
+
+    </ListView>
+</RelativeLayout>
